@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 10:44:22 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 13:04:03 by fschmid          ###   ########.fr       */
+/*   Created: 2022/10/11 13:09:19 by fschmid           #+#    #+#             */
+/*   Updated: 2022/10/11 13:11:53 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_toupper(int c)
 {
-	size_t	i;
-	char	*cpy;
-
-	cpy = (char *) s;
-	i = 0;
-	while (i < n)
-	{
-		cpy[i] = '\0';
-		i++;
-	}
-	s = (void *) cpy;
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
