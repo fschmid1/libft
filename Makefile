@@ -7,7 +7,7 @@ clean:
 	- rm -f ft_*.o
 
 fclean: clean
-	- rm -f ${NAME} $(NAME:.c=.h).gch
+	- rm -f ${NAME} $(NAME:.a=.h.gch)
 
 re: fclean all
 
