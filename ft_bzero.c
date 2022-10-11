@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 10:44:06 by fschmid          ###   ########.fr       */
+/*   Created: 2022/10/11 10:44:22 by fschmid           #+#    #+#             */
+/*   Updated: 2022/10/11 10:50:22 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdbool.h>
+#include "libft.h"
 
-bool	ft_isalpha(int c);
+void	ft_bzero(void *s, int n)
+{
+	int	i;
 
-bool	ft_isdigit(int c);
-
-bool	ft_isalnum(int c);
-
-bool	ft_isascii(int c);
-
-bool	ft_isprint(int c);
-
-int		ft_strlen(char *str);
-
-void	*ft_memset(void *b, int c, int len);
-
-void	ft_bzero(void *s, int n);
-#endif
+	i = 0;
+	while (i < n)
+	{
+		s[i] = '\0';
+		i++;
+	}
+	return (s);
+}
