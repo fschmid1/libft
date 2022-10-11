@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:44:22 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 11:48:10 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 11:52:16 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 void	*ft_bzero(void *s, int n)
 {
-	int	i;
+	int		i;
+	char	*cpy;
 
-	char *cpy = (char *) s;
+	cpy = (char *) s;
 	i = 0;
 	while (i < n)
 	{
