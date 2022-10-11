@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:17:01 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 12:33:11 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 12:36:28 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		((char *)dst)[i] = ((char *)src)[i];
 		i++;
 	}
 	return (dst);
