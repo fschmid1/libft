@@ -6,11 +6,11 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 08:57:44 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 09:09:25 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 09:17:05 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "bool.h"
+#include "libft.h"
 
 bool	ft_isdigit(int c)
 {

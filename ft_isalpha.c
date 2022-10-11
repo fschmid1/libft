@@ -6,15 +6,15 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 08:57:44 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 09:06:18 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 09:17:02 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "bool.h"
+#include "libft.h"
 
 bool	ft_isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (true);
 	return (false);
 }
