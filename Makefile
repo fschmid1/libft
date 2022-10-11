@@ -6,8 +6,7 @@ all:
 clean:
 	- rm -f ft_*.o
 
-fclean:
-	- clean
+fclean: clean
 	- rm -f ${NAME} $(NAME:.c=.h).gch
 
 re: fclean all
