@@ -6,21 +6,22 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:44:22 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 10:50:22 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 11:48:10 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, int n)
+void	*ft_bzero(void *s, int n)
 {
 	int	i;
 
+	char *cpy = (char *) s;
 	i = 0;
 	while (i < n)
 	{
-		s[i] = '\0';
+		cpy[i] = '\0';
 		i++;
 	}
-	return (s);
+	return ((void *) cpy);
 }
