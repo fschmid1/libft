@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 10:27:52 by fschmid          ###   ########.fr       */
+/*   Created: 2022/10/11 10:17:33 by fschmid           #+#    #+#             */
+/*   Updated: 2022/10/11 10:27:47 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdbool.h>
+int	ft_strlen(char *str)
+{
+	int	l;
 
-bool	ft_isalpha(int c);
-
-bool	ft_isdigit(int c);
-
-bool	ft_isalnum(int c);
-
-bool	ft_isascii(int c);
-
-bool	ft_isprint(int c);
-
-int		ft_strlen(char *str);
-#endif
+	l = 0;
+	while (str[l] != '\0')
+		l++;
+	return (l);
+}
