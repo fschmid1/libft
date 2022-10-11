@@ -6,25 +6,23 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 13:35:55 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/11 13:44:22 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdbool.h>
 # include <stdlib.h>
-# include <string.h>
 
-bool	ft_isalpha(int c);
+int	ft_isalpha(int c);
 
-bool	ft_isdigit(int c);
+int	ft_isdigit(int c);
 
-bool	ft_isalnum(int c);
+int	ft_isalnum(int c);
 
-bool	ft_isascii(int c);
+int	ft_isascii(int c);
 
-bool	ft_isprint(int c);
+int	ft_isprint(int c);
 
 int		ft_strlen(char *str);
 
@@ -45,4 +43,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 char	*ft_strchr(const char *s, int c);
+
+char	*ft_strrchr(const char *s, int c);
 #endif
