@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:23:14 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 14:06:27 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/12 10:24:32 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return ((char *)s);
+	while ((*s != '\0') && (*s != c))
 		s++;
-	}
-	return (0);
+	if (*s == c)
+		return ((char *)s);
+	return ((char *) 0);
 }
