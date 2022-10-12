@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/12 11:13:15 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/12 11:37:20 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,6 @@ int		ft_atoi(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char 	*ft_strdup(const char *s1);
+
+void 	*ft_calloc(size_t count, size_t size);
 #endif
