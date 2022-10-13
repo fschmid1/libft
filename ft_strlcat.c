@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:04:37 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/13 13:53:39 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/13 13:56:30 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dstlen;
 
 	i = 0;
-	srclen = ft_strlen((char *) src);*
+	srclen = ft_strlen((char *) src);
 	dstlen = ft_strlen(dst);
 	j = dstlen;
 	if (dstlen > dstsize)
