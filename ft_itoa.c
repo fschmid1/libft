@@ -6,13 +6,13 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:32:49 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/13 17:21:25 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/14 09:42:21 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_numlen(int n)
+static int	ft_numlen(long int n)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ static int	ft_numlen(int n)
 	return (i);
 }
 
-static	char	*ft_createstr(char *str, int n, int end, int i)
+static	char	*ft_createstr(char *str, long int n, int end, int i)
 {
 	if (n < 0)
 		n *= -1;
@@ -48,13 +48,15 @@ static	char	*ft_createstr(char *str, int n, int end, int i)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
-	int		len;
-	int		end;
+	char		*str;
+	int			i;
+	int			len;
+	int			end;
+	long int	nb;
 
 	end = 0;
-	len = ft_numlen(n);
+	nb = (long int) n;
+	len = ft_numlen(nb);
 	if (n < 0)
 	{
 		len++;
@@ -64,5 +66,5 @@ char	*ft_itoa(int n)
 	str = (char *) ft_calloc(1, sizeof(char) * (len + 1));
 	if (!str)
 		return (0);
-	return (ft_createstr(str, n, end, i));
+	return (ft_createstr(str, nb, end, i));
 }
