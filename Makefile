@@ -57,7 +57,7 @@ bonus:
 	- @ar rc $(NAME) $? $(MANDO:.c=.o) $(BONUS:.c=.o) libft.h
 
 clean:
-	- $(RM) $(MANDO:.c=.o) $(BONUS:.c=.o)
+	- $(RM) ft_*.o
 
 fclean: clean
 	- $(RM) ${NAME} $(NAME:.a=.h.gch)
