@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:14:17 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/13 14:57:13 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 13:42:34 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,20 @@ static size_t	ft_wordlen(char const *s, char c)
 	return (i);
 }
 
+static char	**ft_clear(char **words)
+{
+	int	i;
+
+	i = 0;
+	while (words[i])
+	{
+		free(words[i]);
+		i++;
+	}
+	free(words);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t		i;
@@ -64,6 +78,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		len = ft_wordlen(&s[i], c);
 		words[k] = malloc(sizeof(char) * (len + 1));
+		if(!words[k])
+			return (ft_clear(words));
 		ft_strlcpy(words[k], &s[i], len + 1);
 		while (s[i] != '\0' && s[i] != c)
 			i++;
