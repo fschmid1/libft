@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:48:55 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 12:11:24 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *src, const char *str, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (len == 0)
+		return ((char *)src);
 	i = 0;
 	if (*str == '\0' || str == 0)
 		return ((char *) src);

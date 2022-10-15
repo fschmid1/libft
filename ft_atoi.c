@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:07:13 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 15:13:07 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 12:25:34 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	int	sign;
-	int	result;
 	int	i;
+	int	result;
 
 	result = 0;
 	sign = 1;

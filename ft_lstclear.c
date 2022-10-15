@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:08:55 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 16:15:42 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 12:16:28 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		{
 			tmp = (*lst)->next;
 			ft_lstdelone(*lst, del);
+			free(*lst);
 			(*lst) = tmp;
 		}
+		free(*lst);
 	}
 }

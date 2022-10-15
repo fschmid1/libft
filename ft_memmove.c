@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:50:14 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 12:26:37 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 12:02:28 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*d;
 	size_t	i;
 
+	if (!dst && !src)
+		return (NULL);
 	s = (char *)src;
 	d = (char *)dst;
 	i = 0;

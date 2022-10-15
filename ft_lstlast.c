@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:55:35 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 12:12:48 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *current;
+	t_list	*current;
 
 	current = lst;
 	while (current)
