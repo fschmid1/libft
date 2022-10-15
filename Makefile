@@ -1,5 +1,9 @@
 NAME = libft.a
 
+RM = rm -f
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
 MANDO = ft_isalpha.c \
 		ft_toupper.c \
 		ft_isdigit.c \
@@ -45,18 +49,18 @@ BONUS = ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 all:
-	- @gcc -Wall -Wextra -Werror -c $(MANDO) libft.h
+	- @$(CC) $(CFLAGS) -c $(MANDO) libft.h
 	- @ar rc $(NAME) $? $(MANDO:.c=.o) libft.h
 
 bonus:
-	- @gcc -Wall -Wextra -Werror -c $(MANDO) $(BONUS) libft.h
+	- @$(CC) $(CFLAGS) -c $(MANDO) $(BONUS) libft.h
 	- @ar rc $(NAME) $? $(MANDO:.c=.o) $(BONUS:.c=.o) libft.h
 
 clean:
-	- rm -f $(MANDO:.c=.o) $(BONUS:.c=.o)
+	- $(RM) $(MANDO:.c=.o) $(BONUS:.c=.o)
 
 fclean: clean
-	- rm -f ${NAME} $(NAME:.a=.h.gch)
+	- $(RM) ${NAME} $(NAME:.a=.h.gch)
 
 re: fclean all
 
