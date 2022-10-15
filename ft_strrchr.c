@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:23:14 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/12 10:39:54 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (last[i] == find)
 		return (last);
-	return (0);
+	return (NULL);
 }

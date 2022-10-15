@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:02:47 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/13 11:41:24 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	dest = (char *) ft_calloc(1, sizeof(char) * (len + 1));
 	if (!dest)
-		return (0);
+		return (NULL);
 	i = 0;
 	if (start < ((unsigned int) ft_strlen((char *) s)))
 	{

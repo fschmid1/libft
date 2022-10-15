@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 09:46:28 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 10:31:55 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	str = (char *) ft_calloc(1, sizeof(char) * ft_strlen((char *) s) + 1);
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while ((char) s[i] != 0)
 	{

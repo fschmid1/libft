@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:18:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/11 14:46:24 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		s++;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

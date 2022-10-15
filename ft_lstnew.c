@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:26:59 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 15:42:05 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:35:02 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstnew(void *content)
 
 	lst = (t_list *) malloc(sizeof(t_list));
 	if (!lst)
-		return (0);
+		return (NULL);
 	lst->content = content;
 	lst->next = 0;
 	return (lst);

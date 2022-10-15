@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 11:13:36 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 12:35:55 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s1)
 	src = (char *) s1;
 	dest = (char *) ft_calloc(1, sizeof(char) * ft_strlen(src) + 1);
 	if (!dest)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{

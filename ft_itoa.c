@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 15:32:49 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 09:42:21 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ char	*ft_itoa(int n)
 	i = len - 1;
 	str = (char *) ft_calloc(1, sizeof(char) * (len + 1));
 	if (!str)
-		return (0);
+		return (NULL);
 	return (ft_createstr(str, nb, end, i));
 }

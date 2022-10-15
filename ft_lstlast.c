@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:55:35 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 15:57:19 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/15 10:32:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ t_list	*ft_lstlast(t_list *lst)
 			return (current);
 		current = current->next;
 	}
-	return (0);
+	return (NULL);
 }
