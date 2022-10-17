@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:14:17 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/15 13:42:34 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/17 08:41:43 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		len = ft_wordlen(&s[i], c);
 		words[k] = malloc(sizeof(char) * (len + 1));
-		if(!words[k])
+		if (!words[k])
 			return (ft_clear(words));
 		ft_strlcpy(words[k], &s[i], len + 1);
 		while (s[i] != '\0' && s[i] != c)
