@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:48:55 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/17 08:05:07 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/18 14:28:12 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *src, const char *str, size_t len)
 	size_t	j;
 
 	i = 0;
+	// if (len == 0)
+	// 	return ((char *) src);
 	if (*str == '\0' || str == 0)
 		return ((char *) src);
 	while (src[i] != '\0' && i < len)
