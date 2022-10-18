@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:14:17 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/17 08:41:43 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/18 13:47:18 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,20 +71,16 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	k = 0;
 	count = ft_count_words(s, c);
-	words = (char **) malloc(sizeof(char *) * (count + 1));
+	words = (char **) ft_calloc(count + 1, sizeof(char *));
 	while (k < count && words)
 	{
 		while (s[i] != '\0' && s[i] == c)
 			i++;
-		len = ft_wordlen(&s[i], c);
-		words[k] = malloc(sizeof(char) * (len + 1));
-		if (!words[k])
-			return (ft_clear(words));
-		ft_strlcpy(words[k], &s[i], len + 1);
-		while (s[i] != '\0' && s[i] != c)
-			i++;
+		len = ft_wordlen(&s[i], c) + 1;
+		words[k] = ft_calloc(len, sizeof(char));
+		ft_strlcpy(words[k], &s[i], len);
+		i += len - 1;
 		k++;
 	}
-	words[k] = 0;
 	return (words);
 }
