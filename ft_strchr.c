@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:23:14 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/17 11:54:38 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/17 07:59:42 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while ((*s != '\0') && (*s != c))
 		s++;
-	if (*s == c)
+	if (*s == (char) c)
 		return ((char *)s);
 	return ((char *) 0);
 }
