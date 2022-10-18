@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:04:37 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/17 08:38:44 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/18 15:06:39 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dst_len;
 
 	i = 0;
+	if (!dst && dstsize == 0)
+		return (0);
 	src_len = ft_strlen((char *) src);
 	dst_len = ft_strlen(dst);
 	j = dst_len;
