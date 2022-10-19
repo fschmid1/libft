@@ -1,8 +1,11 @@
 NAME = libft.a
 
 RM = rm -f
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
+AR		= ar
+ARFLAGS = -rcs
+INCFLAG	= -I .
 
 MANDO = ft_isalpha.c \
 		ft_toupper.c \
@@ -48,20 +51,27 @@ BONUS = ft_lstnew.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
 		ft_lstmap.c
-all:
-	- @$(CC) $(CFLAGS) -c $(MANDO) libft.h
-	- @ar rc $(NAME) $? $(MANDO:.c=.o) libft.h
 
-bonus:
-	- @$(CC) $(CFLAGS) -c $(MANDO) $(BONUS) libft.h
-	- @ar rc $(NAME) $? $(MANDO:.c=.o) $(BONUS:.c=.o) libft.h
+MANDOOBJ	= $(MANDO:.c=.o)
+BONUSOBJ = $(BONUS:.c=.o)
+
+$(NAME): $(MANDOOBJ)
+	@$(AR) $(ARFLAGS) $@ $^
+
+bonus: $(BONUSOBJ)
+	@$(AR) $(ARFLAGS) $(NAME) $^
+
+%.o : %.c
+	@$(CC) -c $(CFLAGS) $(INCFLAG) $< -o $@
 
 clean:
-	- $(RM) ft_*.o
+	- @$(RM) $(MANDOOBJ) $(BONUSOBJ)
 
 fclean: clean
-	- $(RM) ${NAME} $(NAME:.a=.h.gch)
+	- @$(RM) ${NAME}
 
 re: fclean all
+
+all: $(NAME) bonus
 
 .PHONY: all clean fclean re bonus

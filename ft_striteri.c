@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:38:07 by fschmid           #+#    #+#             */
-/*   Updated: 2022/10/14 10:40:49 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/10/19 09:17:12 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int		i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while ((char) s[i] != 0)
 	{
