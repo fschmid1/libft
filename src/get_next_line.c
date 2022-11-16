@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 14:46:17 by fschmid           #+#    #+#             */
-/*   Updated: 2022/11/16 14:38:59 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/11/16 16:35:55 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char	*ft_read_and_save(int fd, char *save)
 	if (!buff)
 		return (NULL);
 	read_bytes = 1;
-	while (!ft_strchr(save, '\n') && read_bytes != 0)
+	while (!ft_strchr_gnl(save, '\n') && read_bytes != 0)
 	{
 		read_bytes = read(fd, buff, BUFFER_SIZE);
 		if (read_bytes == -1)
@@ -58,7 +58,7 @@ static char	*ft_read_and_save(int fd, char *save)
 			return (NULL);
 		}
 		buff[read_bytes] = '\0';
-		save = ft_strjoin(save, buff);
+		save = ft_strjoin_gnl(save, buff);
 	}
 	free(buff);
 	return (save);
@@ -78,7 +78,7 @@ static char	*ft_save(char *save)
 		free(save);
 		return (NULL);
 	}
-	s = (char *) malloc(sizeof(char) * (ft_strlen(save) - i + 1));
+	s = (char *) malloc(sizeof(char) * (ft_strlen_gnl(save) - i + 1));
 	if (!s)
 		return (NULL);
 	i++;

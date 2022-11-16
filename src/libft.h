@@ -6,7 +6,7 @@
 /*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2022/11/16 15:02:48 by fschmid          ###   ########.fr       */
+/*   Updated: 2022/11/16 16:35:24 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,12 @@ char	*ft_itoa_base(unsigned long n, int lower);
 char	*ft_strprefix(char *prefix, char *str);
 
 char	*ft_ptoa(long n);
+
+size_t	ft_strlen_gnl(char *s);
+
+char	*ft_strchr_gnl(char *s, int c);
+
+char	*ft_strjoin_gnl(char *left_str, char *buff);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
