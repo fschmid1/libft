@@ -1,13 +1,18 @@
 NAME = libft.a
 
-RM = rm -f
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
+MAKEFLAGS += --no-builtin-rules
+MAKEFLAGS += --no-builtin-variables
+
+VPATH = src
+
+# Compiler Variables
+CC		= cc
+CFLAGSS	= -Wall -Wextra -Werror -g
+INCFLAG	= -I include -I printf
 AR		= ar
 ARFLAGS = -rcs
-INCFLAG	= -I .
 
-MANDO = ft_isalpha.c \
+FILES = ft_isalpha.c \
 		ft_toupper.c \
 		ft_isdigit.c \
 		ft_tolower.c \
@@ -42,9 +47,8 @@ MANDO = ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		get_next_line.c
-
-BONUS = ft_lstnew.c \
+		get_next_line.c \
+		ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -52,28 +56,32 @@ BONUS = ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		ft_printf.c \
+		ft_flags.c \
+		ft_printf_util.c
 
-MANDOOBJ	= $(MANDO:.c=.o)
-BONUSOBJ = $(BONUS:.c=.o)
 
-$(NAME): $(MANDOOBJ)
+
+SRC		= $(addprefix src/, $(FILES))
+OBJ		= $(addprefix _bin/,$(notdir $(SRC:.c=.o)))
+
+$(NAME): $(OBJ)
 	@$(AR) $(ARFLAGS) $@ $^
 
-bonus: $(BONUSOBJ)
-	@$(AR) $(ARFLAGS) $(NAME) $^
+_bin :
+	mkdir _bin
 
-%.o : %.c
-	@$(CC) -c $(CFLAGS) $(INCFLAG) $< -o $@
+_bin/%.o : %.c _bin
+	@$(CC) -c $(CFLAGSS) $(INCFLAG) $< -o $@
 
 clean:
-	- @$(RM) $(MANDOOBJ) $(BONUSOBJ)
+	@rm -f $(OBJ)
 
-fclean: clean
-	- @$(RM) ${NAME}
+fclean:	clean
+	@rm -f $(NAME)
+re:		fclean all
 
-re: fclean all
+all:	$(NAME)
 
-all: $(NAME) bonus
-
-.PHONY: all clean fclean re bonus
+.PHONY: clean fclean re all run
