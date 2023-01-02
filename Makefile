@@ -60,7 +60,9 @@ FILES = ft_isalpha.c \
 		ft_lstmap.c \
 		ft_printf.c \
 		ft_flags.c \
-		ft_printf_util.c
+		ft_printf_util.c \
+		free_string_array.c \
+		is_num.c
 
 
 
