@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2023/01/02 14:31:09 by fschmid          ###   ########.fr       */
+/*   Updated: 2023/01/07 14:39:37 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

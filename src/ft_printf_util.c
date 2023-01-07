@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_util.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:05:12 by fschmid           #+#    #+#             */
-/*   Updated: 2022/11/16 15:01:50 by fschmid          ###   ########.fr       */
+/*   Updated: 2023/01/07 14:40:31 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,6 @@ char	*ft_itoa_base(unsigned long n, int lower)
 		return (NULL);
 	if (n == 0)
 		itoa[0] = '0';
-	if (n < 0)
-	{
-		itoa[0] = '-';
-		n = -n;
-	}
 	while (len-- && n)
 	{
 		itoa[len] = base[n % 16];
