@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fschmid <fschmid@student.42heilbronn.de    +#+  +:+       +#+        */
+/*   By: fschmid <fschmid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:17:52 by fschmid           #+#    #+#             */
-/*   Updated: 2023/01/07 14:39:37 by fschmid          ###   ########.fr       */
+/*   Updated: 2023/01/10 13:50:22 by fschmid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ char	*ft_strjoin_gnl(char *left_str, char *buff);
 
 void	free_string_array(char **arr);
 
-int	is_num(char *tmp);
+int		is_num(char *tmp);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
